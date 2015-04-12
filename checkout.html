@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){ 
+	var submitbutton = document.getElementById("tfq");
+	if(submitbutton.addEventListener){
+		submitbutton.addEventListener("click", function() {
+			if (submitbutton.value == 'Search for a Book, Author, or Reference No.'){
+				submitbutton.value = '';
+			}
+		});
+	}
+}
+</script>
+<style>
+	.tftextinput2{
+		margin-left: 30px;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		color:#666;
+		
+		border:0px;
+		width: 35%;
+		}
+	.tfbutton2 {
+		color: gray;
+		border: 1px solid;
+      	border-color: #C8C8C8;
+      	padding: 5px 7px;
+      	border-top-right-radius: 5px 5px;
+      	border-bottom-right-radius: 5px 5px;
+      	
+    }
+    
+    #confirm{
+    	color: white;
+    	background-color: #FF6666;
+		border: 1px solid #CC6666;
+    }
+    
+    #confirm:hover{
+    	background: #FF6666;
+		background: -webkit-gradient(linear, left top, left bottom, from(#FF6666), to(#CC6666));
+		
+    }
+    
+   .book{
+		height: 90px;
+		margin: auto;
+	}
+	
+	.info{
+		vertical-align:top;
+		font-family: Calibri;
+		color: #666;
+		padding: 0;
+		padding-left: 20px;
+		line-height: 1.5;
+	}
+    
+    
+
+    
+	.tfbutton2:hover {
+		text-decoration: none;
+		background: #669966;
+		background: -webkit-gradient(linear, left top, left bottom, from(#66CC66), to(#669966));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	
+	}
+	.tfbutton2::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+	body{
+		padding: 0;
+		margin: 0;
+	}
+</style>
+</head>
+<body>
+	<div style="width: 100%; height: 27px; padding-top: 12px; padding-bottom: 12px;  background-color: #C8C8C8;">
+	    
+	    <input type="text" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" value="Search for a Book, Author, or Reference No." onblur="if (this.value == ' ' || this.value == '') {this.value = 'Search for a Book, Author, or Reference No.';}"><input type="submit" value=">" style="background-color: #66CC66; color: white; border: 1px solid #339933;" class="tfbutton2">
+		
+		<span style="margin-left: 250px; font-family: Calibri; font-size: 20px; color: #707070;">Hello, <i>user's name</i></span>
+		<img src="no-profile-img.jpg" height="30px;" style="vertical-align: middle; margin-left: 20px;">
+		<a href="checkout.html">
+		<img src="small-cart-md.png" height="30px;" style="vertical-align: middle; margin-left: 20px;"></a>
+		
+	</div>
+	
+	<div style="margin-left: 30px; margin-top: 30px; height: 420px; width: 700px; background-color: #E8E8E8; font-size: 10;">
+		<div style="width: 95.7%; background-color: #66CC66; color: white; font-size: 25px; font-family: Trebuchet MS; padding: 15px">
+			You have ordered the following reads: 
+		</div>
+		<table style="font-family: Trebuchet MS; color: gray; width: 100%; padding: 15px;">
+			<tr>
+			<td style="vertical-align: top; ">
+			READS
+			</td>
+			<td style="vertical-align: top; ">
+			<span style="margin-right: 0px;">RENT PRICE</span>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<hr style="width: 400px; border: 0; height: 1.3px; background-color: gray; margin-left: 0;">
+			</td>
+			<td>
+				<hr style="width: 85px; border: 0; height: 1.3px; background-color: gray; margin-left: 0;">
+			</td>
+			</tr>
+			
+			</table>
+			<div style="width: 666px; margin: auto; overflow: scroll; height: 200px;" >
+			<table>
+				<tr>
+					<td>
+							<img src='pratchett.jpg' class='book'>
+							</td>
+							<td class='info'>
+								<font size='5px'><i>Good Omens</i></font><br>
+								#77364512<br>
+								Pratchett, Terry
+							</td>
+							<td style="font-family: Trebuchet MS; color: gray; font-size: 20px; padding-left: 290px;">
+							70.00php
+							</td>
+							
+				</tr>
+				<tr>
+					<td>
+							<img src='martin.jpeg' class='book'>
+					</td>
+							<td class='info'>
+								<font size='5px'><i>Game of Thrones</i></font><br>
+								#14325234<br>
+								Martin, George
+							</td>
+							<td style="font-family: Trebuchet MS;  color: gray; font-size: 20px; padding-left: 290px;">
+							45.00php
+							</td>
+				</tr>
+				<tr>
+					<td>
+								<img src='lu.jpg' class='book'>
+					</td>
+							<td class='info'>
+								<font size='5px'><i>Legend</i></font><br>
+								#98475622<br>
+								Lu, Marie
+							</td>
+							<td style="font-family: Trebuchet MS;  color: gray; font-size: 20px; padding-left: 290px;">
+							70.00php
+							</td>
+				</tr>
+			</table>
+			</div>
+			<hr style="width: 95%; border: 0px; height: 1.3px; background-color: gray;">
+			<table>
+			<tr>
+				<td style= "padding-left: 330px; font-family: Trebuchet MS; color: gray;">
+					<input type="radio" name="editList" value="credit">CREDIT
+					<input type="radio" name="editList" value="cash">CASH
+				</td>
+				<td style="padding-left: 30px; font-family: Trebuchet MS; color: gray; font-size: 18px;">
+					<i>To Pay:</i> 185.00php
+				</td>
+			</tr>
+			<tr>
+				<td style= "padding-left: 185px; font-family: Trebuchet MS; font-size: 12px; color: gray;">
+					<i>These books will be collected 3 weeks upon receive</i>	
+				</td>
+				<td>
+					<a href="confirm.html">
+						<input type=submit style="margin-left: 30px; width: 150px; padding: 5px 7px;" id="confirm" value="CONFIRM ORDER">
+					</a>
+				</td>
+			</tr>
+			</table>
+		</div>
+	
+
+	
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	table{
+		margin-left: 5%;
+		margin-top: 8%;
+		line-hight: 2;
+	}
+	
+	td{
+		background-color: #E8E8E8;
+		margin-left: 4%;
+		margin-top: 6%;
+		padding: 10px;
+		font-family: Calibri;
+		color: gray;
+		line-height: 2;
+	}
+	input[type="text"] {
+		
+		color: gray;
+		border: 1px solid;
+      	border-color: #C8C8C8;
+      	height: 22px;
+	}
+	input[type="submit"]:hover{
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#66CC66), to(#669966));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	
+	td[class=notincluded]{
+		background: none;
+		padding:0px;
+		line-height: 1;
+		padding-left: 100px;
+		color: black;
+		
+	}
+	
+</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<input type="text" style="width: 260px;" value=" Username" onblur="if (this.value == ' ' || this.value == '') {this.value = ' Username';}" onfocus="if (this.value == ' Username') {this.value = ' ';}">
+				<br>
+				<input type="text" style="width: 170px;" value=" Password" onblur="if (this.value == ' ' || this.value == '') {this.value = ' Password';}" onfocus="if (this.value == ' Password') {this.value = ' ';}">
+				<a href="homepage.html">
+				<input type="submit" value="Log in" style="width: 85px; background-color: #66CC66; color: white; border: 1px solid #339933; height: 22px;">
+				</a>
+				<br>
+				<input type="checkbox" value="remember">Remember Me
+			
+			</td>
+			<td class=notincluded>
+				<font size="10px">Welcome to<br>Bookstacked.</font>
+			</td>
+		</tr>
+		<tr><td class="notincluded"><br><br></td></tr>
+		<tr>
+			<td>
+				<font size= "6px">No Account?</font>&nbsp&nbsp<font size="3px">Sign up now.</font><br>
+				<input type="text" style="width: 260px;" value=" Full Name" onblur="if (this.value == ' ' || this.value == '') {this.value = ' Full Name';}" onfocus="if (this.value == ' Full Name') {this.value = ' ';}"><br>
+				<input type="text" style="width: 260px;" value=" Home Address" onblur="if (this.value == ' '|| this.value == '') {this.value = ' Home Address';}" onfocus="if (this.value == ' Home Address') {this.value = ' ';}"><br>
+				<input type="text" style="width: 260px;" value=" Username" onblur="if (this.value == ' '|| this.value == '') {this.value = ' Username';}" onfocus="if (this.value == ' Username') {this.value = ' ';}"><br>
+				<input type="text" style="width: 260px;" value=" Password" onblur="if (this.value == ' '|| this.value == '') {this.value = ' Password';}" onfocus="if (this.value == ' Password') {this.value = ' ';}"><br>
+				<input type="submit" value="Sign Up" style="width: 98%; background-color: #66CC66; color: white; border: 1px solid #339933; height: 22px;">
+				
+			</td>
+			<td class="notincluded" style="vertical-align: top;">
+				
+				Craving for a read but don't have the time to walk to<br>
+				your local bookstore?<br><br>
+				
+				Browse through our online library of books and have<br>
+				them delivered right at your doorstep! Just be sure not<br>
+				to damage them and return them when the time comes<br>
+				because our books are not for sale.				
+				
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){ 
+	var submitbutton = document.getElementById("tfq");
+	if(submitbutton.addEventListener){
+		submitbutton.addEventListener("click", function() {
+			if (submitbutton.value == 'Search for a Book, Author, or Reference No.'){
+				submitbutton.value = '';
+			}
+		});
+	}
+}
+
+
+function ReplaceContentInContainer(id,content) {
+var container = document.getElementById(id);
+container.innerHTML = content;
+}
+
+
+
+
+</script>
+<style type="text/css">
+	#checkout{
+		width: 100%;color: white;
+		border: 0;
+      	padding: 5px 7px;
+      	background-color: #66CC66; 
+	}
+	
+	#checkout:hover{
+    	text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#66CC66), to(#669966));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	
+	.tftextinput2{
+		margin-left: 30px;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		color:#666;
+		
+		border:0px;
+		width: 35%;
+		}
+	.tfbutton2 {
+		color: gray;
+		border: 1px solid;
+      	border-color: #C8C8C8;
+      	padding: 5px 7px;
+      	border-top-right-radius: 5px 5px;
+      	border-bottom-right-radius: 5px 5px;
+      	
+    }
+    
+    .header{
+    	color: white;
+		border: 0;
+      	padding: 5px 7px;
+      	background-color: #66CC66; 
+      	width: 33.33%;
+      	
+    }
+    
+    .header:hover{
+    	text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#66CC66), to(#669966));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+
+    
+	.tfbutton2:hover {
+		text-decoration: none;
+		background: #669966;
+		background: -webkit-gradient(linear, left top, left bottom, from(#66CC66), to(#669966));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	
+	}
+	.tfbutton2::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+	body{
+		padding: 0;
+		margin: 0;
+	}
+	table{
+		margin-left: 30px;
+		margin-top: 30px;
+	}
+	a{
+		font-size: 12px;
+	}
+	.info{
+		vertical-align:top;
+		font-family: Calibri;
+		color: #666;
+		padding: 0;
+		padding-left: 20px;
+		line-height: 1.5;
+	}
+	
+	.buttons{
+		vertical-align:top;
+		padding: 0;
+		padding-left: 20px;
+		line-height: 2.5;
+	}
+	
+	
+	.book{
+		height: 90px;
+		margin: auto;
+	}
+	
+	.rent{
+		color: white;
+		padding: 5px 7px;
+		width: 115px;
+		background-color: #FF6666;
+		border: 1px solid #CC6666;
+	}
+	
+	.rent:hover{
+		background: #FF6666;
+		background: -webkit-gradient(linear, left top, left bottom, from(#FF6666), to(#CC6666));
+		
+	}
+	
+	.read{
+		
+		color: white;
+		padding: 5px 7px;
+		width: 115px;
+		background-color: #FF6666;
+		border: 1px solid #CC6666;
+	}
+	
+	.read:hover{
+		background: #FF6666;
+		background: -webkit-gradient(linear, left top, left bottom, from(#FF6666), to(#CC6666));
+		
+	}
+	
+	.ratings{
+		vertical-align:top;
+		padding: 0;
+		padding-left: 20px;
+		line-height: 2.5;
+	}
+	
+	.rating {
+ 		 unicode-bidi: bidi-override;
+		  direction: rtl;
+		  padding: 0;
+	}
+	.rating > span {
+	 	 display: inline-block;
+ 		 position: relative;
+ 		 height: 20px;
+ 		 margin-right: 12px;
+	}
+	.rating > span:hover:before,
+	.rating > span:hover ~ span:before {
+  		 content: "\2605";
+   		position: absolute;
+   		color: gold;
+	}
+	
+	</style>
+	</head>
+<body>
+	<div style="width: 100%; height: 27px; padding-top: 12px; padding-bottom: 12px;  background-color: #C8C8C8;">
+	    
+	    <input type="text" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" value="Search for a Book, Author, or Reference No." onblur="if (this.value == ' ' || this.value == '') {this.value = 'Search for a Book, Author, or Reference No.';}"><input type="submit" value=">" style="background-color: #66CC66; color: white; border: 1px solid #339933;" class="tfbutton2">
+		
+		<span style="margin-left: 250px; font-family: Calibri; font-size: 20px; color: #707070;">Hello, <i>user's name</i></span>
+		<img src="no-profile-img.jpg" height="30px;" style="vertical-align: middle; margin-left: 20px;">
+		<a href="checkout.html">
+		<img src="small-cart-md.png" height="30px;" style="vertical-align: middle; margin-left: 20px;"></a>
+		
+	</div>
+
+	
+	
+	<table>
+		<tr>
+			<td style="padding: 0; margin: 0; vertical-align: top; line-height: 2; font-family: Calibri; color:#707070; ">
+				<font size="4px">Books to Read:</font><br>
+				
+				<a href="book1.html">Stardust, Neil Gaiman</a><br>
+				<a href="book2.html">A Game of Thrones, George R.R. Martin</a><br>
+				<a href="book3.html">Norwegian Wood, Haruki Murakami</a><br>
+				<a href="book4.html">The Darkest Minds, Alexandra Bracken</a><br>
+				<a href="book5.html">Legend, Marie Lu</a><br>
+				<a href="book6.html">Invisible Monsters, Chuck Palahniuk</a><br>
+				<a href="book7.html">Good Omens, Terry Pratchett</a><br>
+				
+			</td>
+			<td style="padding: 0; padding-left: 30px; vertical-align: top; margin: 0; width: 700px;">
+				<div style="width: 100%; background-color: gray; font-size: 0;">
+					
+					<input type="button" value="LIBRARY" id="lib" onclick="javascript:ReplaceContentInContainer('innerdiv', '<table style=&#34padding-left: 50px; line-height: 3&#34> <tr> <td> <img src=&#34gaiman.jpg&#34 class=&#34book&#34> </td> <td class=&#34info&#34> <font size=&#34 5px &#34><i>Stardust</i></font><br> #12345123<br> Gaiman, Neil </td> <td class=&#34buttons&#34> <input type=&#34submit&#34 value=&#34Rent this Book&#34 class=&#34rent&#34><br> <input type=&#34submit&#34 value=&#34Read Later&#34 class=&#34read&#34> </td> <td class=&#34ratings&#34> <div class=&#34rating&#34> <span> &#9734</span><span> &#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span> </div> <a href=&#34reviews&#34>Click to see reviews and info</a> </td> </tr> <tr> <td> <img src=&#34martin.jpeg&#34 class=&#34book&#34> </td> <td class=&#34info&#34> <font size=&#34 5px &#34><i>Game of Thrones</i></font><br> #14325234<br> Martin, George </td> <td class=&#34buttons&#34> <input type=&#34submit&#34 value=&#34Rent this Book&#34 class=&#34rent&#34><br> <input type=&#34submit&#34 value=&#34Read Later&#34 class=&#34read&#34> </td> <td class=&#34ratings&#34> <div class=&#34rating&#34> <span> &#9734</span><span> &#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span> </div> <a href=&#34reviews&#34>Click to see reviews and info</a> </td> </tr> <tr> <td> <img src=&#34lu.jpg&#34 class=&#34book&#34> </td> <td class=&#34info&#34> <font size=&#34 5px &#34><i>Legend</i></font><br> #98475622<br> Lu, Marie </td> <td class=&#34buttons&#34> <input type=&#34submit&#34 value=&#34Rent this Book&#34 class=&#34rent&#34><br> <input type=&#34submit&#34 value=&#34Read Later&#34 class=&#34read&#34> </td> <td class=&#34ratings&#34> <div class=&#34rating&#34> <span> &#9734</span><span> &#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span> </div> <a href=&#34reviews&#34>Click to see reviews and info</a> </td> </tr> <tr> <td> <img src=&#34pratchett.jpg&#34 class=&#34book&#34> </td> <td class=&#34info&#34> <font size=&#34 5px &#34><i>Good Omens</i></font><br> #77364512<br> Pratchett, Terry </td> <td class=&#34buttons&#34> <input type=&#34submit&#34 value=&#34Rent this Book&#34 class=&#34rent&#34><br> <input type=&#34submit&#34 value=&#34Read Later&#34 class=&#34read&#34> </td> <td class=&#34ratings&#34> <div class=&#34rating&#34> <span> &#9734</span><span> &#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span> </div> <a href=&#34reviews&#34>Click to see reviews and info</a> </td> </tr> </table>'); return false;" class="header">
+					<input type="button" value="FAQS" id="faq" onclick="javascript:ReplaceContentInContainer('innerdiv', '<h1 style=&#34font-family:Trebuchet MS; margin-top: 20%; color: gray; &#34><center>TEXT ABOUT FAQS HERE</center></h1>'); return false;" class="header">
+					<input type="button" value="ABOUT BOOKSTACKED" onclick="javascript:ReplaceContentInContainer('innerdiv', '<h1 style=&#34font-family:Trebuchet MS; margin-top: 20%; color: gray; &#34><center>TEXT ABOUT BOOKSTACKED HERE</center></h1>'); return false;" id="abt" class="header">
+					
+				</div>
+				<div style="width: 100%; height: 350px; background-color: #E8E8E8; overflow: scroll;" id="innerdiv">
+					<table style="padding-left: 50px; line-height: 3">
+						<tr>
+							<td>
+								<img src='gaiman.jpg' class='book'>
+							</td>
+							<td class='info'>
+								<font size='5px'><i>Stardust</i></font><br>
+								#12345123<br>
+								Gaiman, Neil
+							</td>
+							<td class='buttons'>
+								<input type='submit' value='Rent this Book' class="rent"><br>
+								<input type='submit' value='Read Later' class="read">
+								
+							</td>
+							<td class="ratings">
+								<div class="rating">
+								<span> &#9734</span><span> &#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>
+								</div>
+								<a href="reviews">Click to see reviews and info</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src='martin.jpeg' class='book'>
+							</td>
+							<td class='info'>
+								<font size='5px'><i>Game of Thrones</i></font><br>
+								#14325234<br>
+								Martin, George
+							</td>
+							<td class='buttons'>
+								<input type='submit' value='Rent this Book' class="rent"><br>
+								<input type='submit' value='Read Later' class="read">
+								
+							</td>
+							<td class="ratings">
+								<div class="rating">
+								<span> &#9734</span><span> &#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>
+								</div>
+								<a href="reviews">Click to see reviews and info</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src='lu.jpg' class='book'>
+							</td>
+							<td class='info'>
+								<font size='5px'><i>Legend</i></font><br>
+								#98475622<br>
+								Lu, Marie
+							</td>
+							<td class='buttons'>
+								<input type='submit' value='Rent this Book' class="rent"><br>
+								<input type='submit' value='Read Later' class="read">
+								
+							</td>
+							<td class="ratings">
+								<div class="rating">
+								<span> &#9734</span><span> &#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>
+								</div>
+								<a href="reviews">Click to see reviews and info</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src='pratchett.jpg' class='book'>
+							</td>
+							<td class='info'>
+								<font size='5px'><i>Good Omens</i></font><br>
+								#77364512<br>
+								Pratchett, Terry
+							</td>
+							<td class='buttons'>
+								<input type='submit' value='Rent this Book' class="rent"><br>
+								<input type='submit' value='Read Later' class="read">
+								
+							</td>
+							<td class="ratings">
+								<div class="rating">
+								<span> &#9734</span><span> &#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>
+								</div>
+								<a href="reviews">Click to see reviews and info</a>
+							</td>
+						</tr>
+						
+					</table>
+					
+				</div>
+				
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
+    	
